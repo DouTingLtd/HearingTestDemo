@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x6Q-GP-k8c">
+                                <rect key="frame" x="87" y="80" width="185" height="29"/>
+                                <segments>
+                                    <segment title="标准一代耳机"/>
+                                    <segment title="标准二代耳机"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pEb-nG-sFF">
+                                <rect key="frame" x="87" y="126" width="194" height="29"/>
+                                <segments>
+                                    <segment title="自动"/>
+                                    <segment title="手动"/>
+                                    <segment title="标准"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="耳机：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3T-y5-Bk4">
+                                <rect key="frame" x="28" y="83" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="方法：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJm-th-pP6">
+                                <rect key="frame" x="28" y="129" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="测试状态显示" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m6-qF-SsA">
+                                <rect key="frame" x="78" y="213" width="172" height="91"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU0-Jm-Zqa">
+                                <rect key="frame" x="175" y="322" width="90" height="30"/>
+                                <state key="normal" title="开始测试右耳"/>
+                                <connections>
+                                    <action selector="startTestRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7x-GL-2sx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbi-MY-S23">
+                                <rect key="frame" x="116" y="400" width="104" height="71"/>
+                                <color key="backgroundColor" red="0.97254908080000002" green="0.96078437569999997" blue="0.2117647231" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="听到了"/>
+                                <connections>
+                                    <action selector="heard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Gj-Qe-FuG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-Cz-kSa">
+                                <rect key="frame" x="48" y="322" width="90" height="30"/>
+                                <state key="normal" title="开始测试左耳"/>
+                                <connections>
+                                    <action selector="startTestLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EH0-Yl-IGQ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scG-qb-eA6">
+                                <rect key="frame" x="247" y="400" width="73" height="38"/>
+                                <color key="backgroundColor" red="0.97254908080000002" green="0.96078437569999997" blue="0.2117647231" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="重置"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tb7-xQ-gNu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="erjiType" destination="x6Q-GP-k8c" id="vIW-aa-Qh0"/>
+                        <outlet property="heardButton" destination="hbi-MY-S23" id="UjF-WE-jLN"/>
+                        <outlet property="startLeft" destination="kgy-Cz-kSa" id="PZX-bC-Pkz"/>
+                        <outlet property="startRight" destination="JU0-Jm-Zqa" id="x99-Ku-44C"/>
+                        <outlet property="status" destination="1m6-qF-SsA" id="EDE-jE-eUv"/>
+                        <outlet property="testType" destination="pEb-nG-sFF" id="nsY-ra-S4O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="192"/>
+        </scene>
+    </scenes>
+</document>
