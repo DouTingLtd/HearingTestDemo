@@ -21,6 +21,19 @@
     
     [TLBHearingTest registerAppKey:@"8a2b0565571d2024015727edcf730000"];//修改为你的appkey
     
+    [TLBHearingTest  setAppUserID:@"hdkfjksd" isWomen:YES birthday:[NSDate date] phone:@"133333333333" completionHandler:^(NSError *error) {
+        
+        if(error == nil)
+        {
+            NSLog(@"OK");
+        }
+        else
+        {
+            NSLog(@"错误");
+        }
+        
+    }];
+    
     return YES;
 }
 

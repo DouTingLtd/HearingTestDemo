@@ -31,7 +31,7 @@
     self.test.delegate = self;
     
     __weak ViewController* vc = self;
-    [self.test setEarPlugModel:[NSString stringWithFormat:@"%d",self.erjiType.selectedSegmentIndex] completionHandler:^(NSError *error) {
+    [self.test setT100MAC:@"16:07:07:00:DF:F5" completionHandler:^(NSError *error) {
         NSLog(@"%@",error);
         if(error == nil)
             [vc.status setText:@"设置耳机返回OK"];
@@ -73,8 +73,8 @@
 {
     [self.status setText:@"测试完成"];
     
-    NSInteger left = [TLBHearingTest computeEarTestResult:result age:22 gender:@"1"];
-    NSInteger rig = [TLBHearingTest computeEarTestResult:right age:22 gender:@"1"];
+    NSInteger left = [TLBHearingTest computeEarTestResult:result];
+    NSInteger rig = [TLBHearingTest computeEarTestResult:right];
     
     [self.status setText:[NSString stringWithFormat:@"left:%@,right:%@",@(left),@(rig)]];
     NSLog(@"left:%@,right:%@",@(left),@(rig));
