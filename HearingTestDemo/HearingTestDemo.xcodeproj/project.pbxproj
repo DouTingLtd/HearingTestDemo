@@ -14,6 +14,10 @@
 		4E2436871D9A03AA007D19F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2436851D9A03AA007D19F3 /* ViewController.m */; };
 		4E2436881D9A03AA007D19F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2436861D9A03AA007D19F3 /* Main.storyboard */; };
 		4E31C1DA1F25C45B007D0BD0 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31C1D91F25C45B007D0BD0 /* RootTableViewController.m */; };
+		4E389FF4222138A100E0E036 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E389FF3222138A100E0E036 /* BuyViewController.m */; };
+		4E389FF6222138BA00E0E036 /* TLBHearingTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */; };
+		4E389FF7222138C700E0E036 /* TLBHearingTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */; };
+		4E389FF8222138C700E0E036 /* TLBHearingTestSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4E389FF8222138C700E0E036 /* TLBHearingTestSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,9 @@
 		4E2436861D9A03AA007D19F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4E31C1D81F25C45B007D0BD0 /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		4E31C1D91F25C45B007D0BD0 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
+		4E389FF2222138A100E0E036 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
+		4E389FF3222138A100E0E036 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
+		4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLBHearingTestSDK.framework; path = HearingTestDemo/TLBHearingTestSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E389FF6222138BA00E0E036 /* TLBHearingTestSDK.framework in Frameworks */,
+				4E389FF7222138C700E0E036 /* TLBHearingTestSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +67,7 @@
 		4E24365F1D9A02BD007D19F3 = {
 			isa = PBXGroup;
 			children = (
+				4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */,
 				4E24366A1D9A02BD007D19F3 /* HearingTestDemo */,
 				4E2436691D9A02BD007D19F3 /* Products */,
 			);
@@ -79,6 +90,8 @@
 				4E31C1D91F25C45B007D0BD0 /* RootTableViewController.m */,
 				4E2436841D9A03AA007D19F3 /* ViewController.h */,
 				4E2436851D9A03AA007D19F3 /* ViewController.m */,
+				4E389FF2222138A100E0E036 /* BuyViewController.h */,
+				4E389FF3222138A100E0E036 /* BuyViewController.m */,
 				4E2436861D9A03AA007D19F3 /* Main.storyboard */,
 				4E2436771D9A02BD007D19F3 /* Assets.xcassets */,
 				4E2436791D9A02BD007D19F3 /* LaunchScreen.storyboard */,
@@ -128,6 +141,7 @@
 				TargetAttributes = {
 					4E2436671D9A02BD007D19F3 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = MMEHZ43G5T;
 					};
 				};
 			};
@@ -171,6 +185,7 @@
 				4E2436701D9A02BD007D19F3 /* AppDelegate.m in Sources */,
 				4E24366D1D9A02BD007D19F3 /* main.m in Sources */,
 				4E31C1DA1F25C45B007D0BD0 /* RootTableViewController.m in Sources */,
+				4E389FF4222138A100E0E036 /* BuyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MMEHZ43G5T;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MMEHZ43G5T;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

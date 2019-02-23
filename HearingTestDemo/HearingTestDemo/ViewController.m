@@ -39,6 +39,11 @@
             [vc.status setText:@"设置耳机返回错误"];
     }];
 }
+-(void)dealloc
+{
+    [self.test pauseTest];
+    self.test = nil;
+}
 - (IBAction)stoptest:(id)sender {
     
     [self.test pauseTest];

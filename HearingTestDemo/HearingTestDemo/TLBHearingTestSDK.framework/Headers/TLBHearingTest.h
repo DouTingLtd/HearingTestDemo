@@ -15,7 +15,9 @@ typedef enum
     StandardTest//标准测试
     
 }TLBHearingTestType;
-
+#define EXEONMAINTHREAD(x) dispatch_async(dispatch_get_main_queue(), ^{\
+x;\
+})
 @class TLBHearingTest;
 //=================================================
 @protocol TLBHearingTestDelegate <NSObject>
@@ -35,16 +37,24 @@ typedef enum
 
 @interface TLBHearingTest : NSObject
 @property(nonatomic,weak)id  <TLBHearingTestDelegate> delegate;
+@property(nonatomic,strong)NSString* earPlugModel;//当前使用的耳机类型0-3
 //=================================================
 -(instancetype )initWithTestType:(TLBHearingTestType)type;
+
 //=================================================
 +(void) registerAppKey:(NSString*)key;//注册key,使用类之前设置
 //设置用户信息
 +(void) setAppUserID:(NSString*)userID isWomen:(BOOL)isWomen birthday:(NSDate*)birthday phone:(NSString*)phone
    completionHandler:(void (^)(NSError* error))completionHandler;
 +(void)getListenTestWithCompletion:(void (^)(NSError *error,NSArray* tests))completion;
-//-(void) setEarPlugModel:(NSString*) model completionHandler:(void (^)( NSError * __nullable error))completionHandler;//设置插入的耳机类型,必须设置
+-(void) setEarPlugModel:(NSString*) model completionHandler:(void (^)( NSError * __nullable error))completionHandler;//设置插入的耳机类型,必须设置
 -(void)setT100MAC:(NSString*) mac completionHandler:(void (^)( NSError * __nullable error))completionHandler;//设置插入的耳机类型,必须设置
+
++(void)getListenTestPriceWithCompletion:(void (^)(NSError *error,NSDictionary* headset,NSArray* prices))completion;
++(void)listenTestPurchaseWithCompletion:(void (^)(NSError * __nullable error))completion;
++(void)listenTestConsumptionWithCompletion:(void (^)(NSError * __nullable error))completion;
++(void)listenTestWithLeft:(NSDictionary*)left right:(NSDictionary*)right  earPlugModel:(NSString*)earPlugModel   completion:(void (^)(NSString* listenTestID,NSError *error))completion;
+
 -(void) setNosiseValue:(NSString*) dbValue;//设置当前的环境噪声大小
 -(void)setLogEnable:(BOOL)isShowLog;
 
@@ -63,5 +73,10 @@ typedef enum
 +(NSInteger)computeEarTestResult:(NSDictionary*)dataDictory;//依据测试结果计算听力损失db
 +(NSString *)computeResultString:(NSInteger)result;//依据听力损失获取听力结果描述
 //=================================================
+
+
++(NSString*)getT100Mac;//获取检测仪的mac地址
++ (BOOL)hasHeadset;
++(NSString *)platform;
 @end
 

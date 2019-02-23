@@ -11,6 +11,7 @@
 @interface TLBHearingTestViewController : UIViewController
 
 //插入的耳机类型
--(instancetype)initWithT100MAC:(NSString*) mac completionHandler:(void (^)( NSError * __nullable error))completionHandler;
+-(instancetype)initT100TestByCompletionHandler:(void (^)( NSError * __nullable error))completionHandler;
 
+-(instancetype)initEarphoneTestByCompletionHandler:(void (^)( NSError * __nullable error))completionHandler;
 @end

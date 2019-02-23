@@ -19,9 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [TLBHearingTest registerAppKey:@"8a2b0565571d2024015727edcf730000"];//修改为你的appkey
+    [TLBHearingTest registerAppKey:@"8a2bbc596883f7bc0168fe9c23505899"];//修改为你的appkey
     
-    [TLBHearingTest  setAppUserID:@"hdkfjksd" isWomen:YES birthday:[NSDate date] phone:@"133333333333" completionHandler:^(NSError *error) {
+    [TLBHearingTest  setAppUserID:@"FGHRTYUILADFBAECCB" isWomen:YES birthday:[NSDate dateWithTimeInterval:-9*365*24*3600 sinceDate:[NSDate date]]  phone:@"133333333333" completionHandler:^(NSError *error) {
         
         if(error == nil)
         {

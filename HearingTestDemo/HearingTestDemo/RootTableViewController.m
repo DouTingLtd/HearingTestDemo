@@ -7,13 +7,19 @@
 //
 
 #import "RootTableViewController.h"
-#import <TLBHearingTestSDK/TLBHearingTestViewController.h>
+#import "BuyViewController.h"
 
+
+#import <TLBHearingTestSDK/TLBHearingTestViewController.h>
 #import <TLBHearingTestSDK/TLBTestHistoryViewController.h>
 #import <TLBHearingTestSDK/TLBHearingTest.h>
+#import <TLBHearingTestSDK/TLBSelectTypeViewController.h>
+
+
 
 @interface RootTableViewController ()
 @property(nonatomic,strong)TLBHearingTestViewController* testVC ;
+@property(nonatomic,strong)TLBSelectTypeViewController* selectTypevc;
 @end
 
 @implementation RootTableViewController
@@ -37,19 +43,14 @@
 {
     if(indexPath.row == 0)
     {
-        
-        self.testVC = [[TLBHearingTestViewController alloc] initWithT100MAC:@"16:07:07:00:DF:F5" completionHandler:^(NSError *error) {
-            NSLog(@"%@",error);
-            if(error == nil)
-            {
-                NSLog(@"设置耳机返回OK");
-                [self performSelectorOnMainThread:@selector(gotoTest) withObject:nil waitUntilDone:NO];
-                
-            }
-            else
-                NSLog(@"设置耳机返回错误");
-        }];
-        
+
+        self.selectTypevc = [[TLBSelectTypeViewController alloc] init];
+        self.selectTypevc.delegate = self;
+        [self.selectTypevc showSelectTypeViewControllerByNavigation:self.navigationController
+                                                       leftBarTitle:nil
+                                                      leftBarAction:nil
+                                                      rightBarTitle:nil
+                                                     rightBarAction:nil];
        
     }
     else if(indexPath.row ==1)
@@ -70,12 +71,47 @@
         [self.navigationController pushViewController:vc animated:YES];
         
     }
+
 }
 
+-(void) tlbSdkCharge:(double) price  /*建议金额*/
+{
+    NSLog(@"选择了普通耳机，收费%f",price);
+    
+    //。。。。支付流程后回调
+    
+    UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //
+    BuyViewController *vc=[storyBoard instantiateViewControllerWithIdentifier:@"BuyViewController"];
+    
+    
+    vc.buyCompleteBlock = ^{
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+        [self.selectTypevc tlbSdkPurchase:price];
+    };
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+    
 
+}
+//点击购买检测仪
+-(void) buyButtonClick:(UIButton*) buyButton /*点击购买检测仪button*/
+{
+    NSLog(@"点击了购买链接");
+    
+    //例如
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://item.taobao.com/item.htm?spm=a1z10.1-c.w5003-17642606087.1.300f5fbeSk316G&id=563601486085&scene=taobao_shop"]];
+}
 -(void) gotoTest
 {
 
+    if([[self.navigationController topViewController] isMemberOfClass:[self.testVC class]])
+    {
+        return;
+    }
     [self.navigationController pushViewController:self.testVC animated:YES];
 }
 
