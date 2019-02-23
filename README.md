@@ -1,5 +1,30 @@
 听力宝－iOS听力测试SDK集成文档
 
+---------------2019.02.03更新-----------------
+
+流程介绍：开始-》选择耳机-》测试-》测试结果-》测试记录
+
+1: 加入选择耳机测试页面-TLBSelectTypeViewController
+
+1.1显示方式如下，设置导航控制器后，内部使用来进行页面跳准：
+-(void)showSelectTypeViewControllerByNavigation:(UINavigationController*) navi
+leftBarTitle:(NSString*)leftBarTitle
+leftBarAction:(void (^)())leftBarAction
+rightBarTitle:(NSString*)rightBarTitle
+rightBarAction:(void (^)())rightBarAction;
+
+1.2:收费测试和点击购买检测仪
+@protocol TLBEarphoneTestChargeDelegate <NSObject>
+
+//需要收费
+-(void) tlbSdkCharge:(double) price  /*建议金额*/;
+//点击购买检测仪
+-(void) buyButtonClick:(UIButton*) buyButton /*点击购买检测仪button*/;
+
+2:历史记录-TLBTestHistoryViewController
+
+
+-------------------------------------------------
 1:SDK介绍
 
 iOS听力测试SDK是一个动态framework，TLBHearingTestSDK.framework，支持iOS8以上，提供3种测试逻辑：自动测试／手动测试／标准测试，目前支持iphone一代&二代耳机，并可获得测试结果。
