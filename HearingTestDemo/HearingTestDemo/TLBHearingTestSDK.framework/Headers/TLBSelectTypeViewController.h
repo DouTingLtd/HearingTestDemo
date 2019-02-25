@@ -21,6 +21,7 @@
 
 @property(weak,nonatomic)id<TLBEarphoneTestChargeDelegate> delegate;
 
+//选择使用，将ViewController通过设置的navi导航器push进入，同时支持自定义左右按钮
 -(void)showSelectTypeViewControllerByNavigation:(UINavigationController*) navi
                                    leftBarTitle:(NSString*)leftBarTitle
                                   leftBarAction:(void (^)())leftBarAction
