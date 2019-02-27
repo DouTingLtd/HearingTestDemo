@@ -44,8 +44,9 @@ x;\
 //=================================================
 +(void) registerAppKey:(NSString*)key;//注册key,使用类之前设置
 //设置用户信息
-+(void) setAppUserID:(NSString*)userID isWomen:(BOOL)isWomen birthday:(NSDate*)birthday phone:(NSString*)phone
-   completionHandler:(void (^)(NSError* error))completionHandler;
++(void) setAppUserID:(NSString*)userID username:(NSString*)username isWomen:(BOOL)isWomen birthday:(NSDate*)birthday phone:(NSString*)phone completionHandler:(void (^)(NSError* error))completionHandler;//注册用户信息,使用类之前设置
+//+(void) setAppUserID:(NSString*)userID isWomen:(BOOL)isWomen birthday:(NSDate*)birthday phone:(NSString*)phone
+//   completionHandler:(void (^)(NSError* error))completionHandler;
 +(void)getListenTestWithCompletion:(void (^)(NSError *error,NSArray* tests))completion;
 -(void) setEarPlugModel:(NSString*) model completionHandler:(void (^)( NSError * __nullable error))completionHandler;//设置插入的耳机类型,必须设置
 -(void)setT100MAC:(NSString*) mac completionHandler:(void (^)( NSError * __nullable error))completionHandler;//设置插入的耳机类型,必须设置

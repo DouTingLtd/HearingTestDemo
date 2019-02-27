@@ -21,7 +21,7 @@
     
     [TLBHearingTest registerAppKey:@"8a2bbc596883f7bc0168fe9c23505899"];//修改为你的appkey
     
-    [TLBHearingTest  setAppUserID:@"FGHRTYUILADFBAECCB" isWomen:YES birthday:[NSDate dateWithTimeInterval:-9*365*24*3600 sinceDate:[NSDate date]]  phone:@"133333333333" completionHandler:^(NSError *error) {
+    [TLBHearingTest  setAppUserID:@"FGHRTYUILADFBCCB" username:@"xxxxxxxxxxx"  isWomen:YES birthday:[NSDate dateWithTimeInterval:-10*365*24*3600 sinceDate:[NSDate date]]  phone:@"133333333333" completionHandler:^(NSError *error) {
         
         if(error == nil)
         {
