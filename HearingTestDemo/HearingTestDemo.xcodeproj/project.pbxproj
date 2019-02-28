@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E104EC82227F7AE0014684C /* TLBHearingTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E104EC72227F7AD0014684C /* TLBHearingTestSDK.framework */; };
+		4E104ECA2227F7BA0014684C /* TLBHearingTestSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E104EC92227F7B90014684C /* TLBHearingTestSDK.bundle */; };
+		4E104ECB2227F7FA0014684C /* TLBHearingTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E104EC72227F7AD0014684C /* TLBHearingTestSDK.framework */; };
+		4E104ECC2227F7FA0014684C /* TLBHearingTestSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E104EC72227F7AD0014684C /* TLBHearingTestSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E24366D1D9A02BD007D19F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E24366C1D9A02BD007D19F3 /* main.m */; };
 		4E2436701D9A02BD007D19F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E24366F1D9A02BD007D19F3 /* AppDelegate.m */; };
 		4E2436781D9A02BD007D19F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2436771D9A02BD007D19F3 /* Assets.xcassets */; };
@@ -15,9 +19,6 @@
 		4E2436881D9A03AA007D19F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2436861D9A03AA007D19F3 /* Main.storyboard */; };
 		4E31C1DA1F25C45B007D0BD0 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31C1D91F25C45B007D0BD0 /* RootTableViewController.m */; };
 		4E389FF4222138A100E0E036 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E389FF3222138A100E0E036 /* BuyViewController.m */; };
-		4E389FF6222138BA00E0E036 /* TLBHearingTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */; };
-		4E389FF7222138C700E0E036 /* TLBHearingTestSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */; };
-		4E389FF8222138C700E0E036 /* TLBHearingTestSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,13 +28,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E389FF8222138C700E0E036 /* TLBHearingTestSDK.framework in CopyFiles */,
+				4E104ECC2227F7FA0014684C /* TLBHearingTestSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E104EC72227F7AD0014684C /* TLBHearingTestSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLBHearingTestSDK.framework; sourceTree = "<group>"; };
+		4E104EC92227F7B90014684C /* TLBHearingTestSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TLBHearingTestSDK.bundle; sourceTree = "<group>"; };
 		4E2436681D9A02BD007D19F3 /* HearingTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HearingTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E24366C1D9A02BD007D19F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E24366E1D9A02BD007D19F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		4E31C1D91F25C45B007D0BD0 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		4E389FF2222138A100E0E036 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
 		4E389FF3222138A100E0E036 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
-		4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLBHearingTestSDK.framework; path = HearingTestDemo/TLBHearingTestSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E389FF6222138BA00E0E036 /* TLBHearingTestSDK.framework in Frameworks */,
-				4E389FF7222138C700E0E036 /* TLBHearingTestSDK.framework in Frameworks */,
+				4E104EC82227F7AE0014684C /* TLBHearingTestSDK.framework in Frameworks */,
+				4E104ECB2227F7FA0014684C /* TLBHearingTestSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +69,8 @@
 		4E24365F1D9A02BD007D19F3 = {
 			isa = PBXGroup;
 			children = (
-				4E389FF5222138BA00E0E036 /* TLBHearingTestSDK.framework */,
+				4E104EC92227F7B90014684C /* TLBHearingTestSDK.bundle */,
+				4E104EC72227F7AD0014684C /* TLBHearingTestSDK.framework */,
 				4E24366A1D9A02BD007D19F3 /* HearingTestDemo */,
 				4E2436691D9A02BD007D19F3 /* Products */,
 			);
@@ -170,6 +173,7 @@
 			files = (
 				4E2436881D9A03AA007D19F3 /* Main.storyboard in Resources */,
 				4E24367B1D9A02BD007D19F3 /* LaunchScreen.storyboard in Resources */,
+				4E104ECA2227F7BA0014684C /* TLBHearingTestSDK.bundle in Resources */,
 				4E2436781D9A02BD007D19F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
