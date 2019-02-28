@@ -32,7 +32,7 @@ x;\
 //将要测试某hz的某db
 -(void) hearingTest:(nonnull TLBHearingTest*)test willTestAtHz:(nonnull NSString*) hz db:(nonnull NSString*)db volume:(float)volume isLeft: (BOOL)isLeft;
 //将要选中某hz的某db为阀值点
--(void) hearingTest:(nonnull TLBHearingTest*)test willSelectedAtHz:(nonnull NSString*) hz db:(nonnull NSString*)db isLeft: (BOOL)isLeft;
+-(void) hearingTest:(nonnull TLBHearingTest*)test willSelectedAtHz:(nonnull NSString*) hz db:(nonnull NSString*)db isLeft: (BOOL)isLeft isInvalid:(BOOL)isInvalid;
 @end
 
 @interface TLBHearingTest : NSObject

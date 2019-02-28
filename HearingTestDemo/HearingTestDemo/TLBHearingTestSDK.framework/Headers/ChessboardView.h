@@ -26,7 +26,7 @@
 
 -(void) drawTestEnd;
 -(void) drawTestAtHz:(NSString*)hz db:(NSString*)db;
--(void) drawSelectAtHz:(NSString*)hz db:(NSString*)db;
+-(void) drawSelectAtHz:(NSString*)hz db:(NSString*)db isInvalid:(BOOL)invalid;
 
 @end
 

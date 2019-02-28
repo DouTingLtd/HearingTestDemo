@@ -99,7 +99,7 @@
 {
     [self.status setText:[NSString stringWithFormat: @"will测试%@,%@,vol=%f",hz,db,volume]];
 }
--(void) hearingTest:(TLBHearingTest*)test willSelectedAtHz:(NSString*) hz db:(NSString*)db isLeft: (BOOL)isLeft;
+-(void) hearingTest:(TLBHearingTest*)test willSelectedAtHz:(NSString*) hz db:(NSString*)db isLeft: (BOOL)isLeft isInvalid:(BOOL)isInvalid
 {
     [self.status setText:[NSString stringWithFormat: @"测试ok%@,%@",hz,db]];
 }
