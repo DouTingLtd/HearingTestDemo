@@ -51,7 +51,8 @@ x;\
 -(void) setEarPlugModel:(NSString*) model completionHandler:(void (^)( NSError * __nullable error))completionHandler;//设置插入的耳机类型,必须设置
 -(void)setT100MAC:(NSString*) mac completionHandler:(void (^)( NSError * __nullable error))completionHandler;//设置插入的耳机类型,必须设置
 
-+(void)getListenTestPriceWithCompletion:(void (^)(NSError *error,NSDictionary* headset,NSArray* prices))completion;
++(void)getListenTestDescribeTextWithCompletion:(void (^)(NSError *error,NSString* headset,NSString* erji))completion;
++(void)getListenTestPriceWithCompletion:(void (^)(NSError *error,NSDictionary* headset,NSArray* prices,NSDictionary* acts))completion;
 +(void)listenTestPurchaseWithCompletion:(void (^)(NSError * __nullable error))completion;
 +(void)listenTestConsumptionWithCompletion:(void (^)(NSError * __nullable error))completion;
 +(void)listenTestWithLeft:(NSDictionary*)left right:(NSDictionary*)right  earPlugModel:(NSString*)earPlugModel   completion:(void (^)(NSString* listenTestID,NSError *error))completion;
